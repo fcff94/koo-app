@@ -1,0 +1,47 @@
+@import "../../styles/_colors.scss";
+
+.card_footer {
+    display: flex;
+    flex-direction: column;
+
+    .card_form {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        border-radius: 10px;
+        margin: 16px 16px 0;
+        border: 1px solid $border-primary;
+        
+        .input_comment_icon{
+          width: 24px;
+          height: 24px;
+          margin-left: 5px;
+        }
+
+        .input_comment{
+          border: none;
+          margin-left: 8px;
+        }
+    }
+
+    .card_actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 16px;
+
+        .action_label {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn_label_count {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 2px;
+            font-weight: 500;
+            color: $text-quaternary;
+        }
+    }
+
+}

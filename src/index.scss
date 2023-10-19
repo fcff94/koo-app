@@ -1,3 +1,5 @@
+@import "styles/_colors.scss";
+
 :root {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
@@ -39,4 +41,12 @@ h1 {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+
+.btn_icon {
+  background: $background-secondary;
+  border: none;
+
 }
