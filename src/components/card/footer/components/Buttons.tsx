@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import styles from './CardFooter.module.scss';
-import likeIcon from '../../assets/img/like.svg'
-import commentIcon from '../../assets/img/comment.svg'
-import retweetIcon from '../../assets/img/retweet.svg'
-import whatsappIcon from '../../assets/img/whatsapp.svg'
-import shareIcon from '../../assets/img/share.svg'
+import styles from '@/components/card/footer/CardFooter.module.scss';
+import likeIcon from '@/assets/img/like.svg'
+import commentIcon from '@/assets/img/comment.svg'
+import retweetIcon from '@/assets/img/retweet.svg'
+import whatsappIcon from '@/assets/img/whatsapp.svg'
+import shareIcon from '@/assets/img/share.svg'
 
 export function Buttons() {
 

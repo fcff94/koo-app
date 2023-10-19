@@ -1,8 +1,8 @@
-import styles from './CardHeader.module.scss';
-import profilePhoto from '../../assets/img/profile_photo.jpeg';
-import verifiedBadge from '../../assets/img/verified_badge.png';
-import followIcon from '../../assets/img/follow.svg';
-import moreOptionsIcon from '../../assets/img/options.svg';
+import styles from '@/components/card/header/CardHeader.module.scss';
+import profilePhoto from '@/assets/img/profile_photo.jpeg';
+import verifiedBadge from '@/assets/img/verified_badge.png';
+import followIcon from '@/assets/img/follow.svg';
+import moreOptionsIcon from '@/assets/img/options.svg';
 
 export function CardHeader(){
     return (

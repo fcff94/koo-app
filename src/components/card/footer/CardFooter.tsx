@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import styles from './CardFooter.module.scss';
+import styles from '@/components/card/footer/CardFooter.module.scss';
+import { Comment } from './components/Comment';
+import { Buttons } from './components/Buttons';
 
 export function CardFooter() {
 

@@ -1,7 +1,7 @@
 import styles from './Card.module.scss';
-import {CardHeader} from './CardHeader';
-import { CardContent } from './CardContent';
-import { CardFooter } from './CardFooter';
+import {CardHeader} from '@/components/card/header/CardHeader';
+import { CardContent } from '@/components/card/content/CardContent';
+import { CardFooter } from '@/components/card/footer/CardFooter';
 
 export function CardComponent() {
     return (
@@ -14,7 +14,7 @@ export function CardComponent() {
                 <CardContent />
 
                {/* Footer */}
-               <CardFooter/>
+               <CardFooter />
             </div>
         </>
     );

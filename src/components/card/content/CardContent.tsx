@@ -1,5 +1,5 @@
-import styles from './CardContent.module.scss';
-import postPhoto from '../../assets/img/post_media_photo.jpg';
+import styles from '@/components/card/content/CardContent.module.scss';
+import postPhoto from '@/assets/img/post_media_photo.jpg';
 
 export function CardContent(){
     return (

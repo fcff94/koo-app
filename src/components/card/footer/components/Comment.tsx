@@ -1,6 +1,6 @@
 
-import styles from './CardFooter.module.scss';
-import commentInputIcon from '../../assets/img/comment_input_icon.svg'
+import styles from '@/components/card/footer/CardFooter.module.scss';
+import commentInputIcon from '@/assets/img/comment_input_icon.svg'
 
 export function Comment() {
     return (
