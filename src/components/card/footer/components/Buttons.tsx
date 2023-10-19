@@ -5,9 +5,8 @@ import commentIcon from '../../assets/img/comment.svg'
 import retweetIcon from '../../assets/img/retweet.svg'
 import whatsappIcon from '../../assets/img/whatsapp.svg'
 import shareIcon from '../../assets/img/share.svg'
-import commentInputIcon from '../../assets/img/comment_input_icon.svg'
 
-export function CardFooter() {
+export function Buttons() {
 
     const [likeCount, setLikesCounter] = useState(0)
     const [commentCount, setCommentCounter] = useState(0)
@@ -28,11 +27,6 @@ export function CardFooter() {
     return (
         <>
             <div className={styles.card_footer}>
-                {/* field comment */}
-                <div className={styles.card_form}>
-                    <img alt="" className={styles.input_comment_icon} src={commentInputIcon} />
-                    <input className={styles.input_comment} placeholder="Write your comment" type="text" />
-                </div>
 
                 {/* actions */}
                 <div className={styles.card_actions}>

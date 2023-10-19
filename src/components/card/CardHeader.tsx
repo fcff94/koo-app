@@ -28,7 +28,7 @@ export function CardHeader(){
                     <div className={styles.post_timestamp_actions}>
                         <a href="" className={styles.post_timestamp_link}>
                             <div className={styles.post_timestamp}>
-                                19 Feb 2021
+                                21/07/2023
                             </div>
                         </a>
 
