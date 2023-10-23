@@ -1,26 +1,25 @@
 import styles from '@/components/card/header/CardHeader.module.scss';
-import profilePhoto from '@/assets/img/profile_photo.jpeg';
 import verifiedBadge from '@/assets/img/verified_badge.png';
 import followIcon from '@/assets/img/follow.svg';
 import moreOptionsIcon from '@/assets/img/options.svg';
 
-export function CardHeader(){
+export function CardHeader({userImg, displayName, username, date}: {userImg: string, displayName: string, username: string, date: string}){
     return (
         <>
             <div className={styles.card_header}>
                     <div className={styles.profile_details_wrapper}>
                         <div className={styles.profile_photo}>
-                            <img src={profilePhoto} alt="User profile photo" />
+                            <img src={userImg} alt="User profile photo" />
                         </div>
                         <div className={styles.profile_details}>
                             <div className={styles.profile_feedname_wrapper}>
-                                <h3 className={styles.profile_feedname}>Koo English</h3>
+                                <h3 className={styles.profile_feedname}>{displayName}</h3>
                                 <div className={styles.profile_verified_badge}>
                                     <img src={verifiedBadge} alt="Verified user badge" />
                                 </div>
                             </div>
                             <div className={styles.profile_link_wrapper}>
-                                <div className={styles.profile_link}>@kooenglish</div>
+                                <div className={styles.profile_link}>{username}</div>
                             </div>
                         </div>
                     </div>
@@ -28,7 +27,7 @@ export function CardHeader(){
                     <div className={styles.post_timestamp_actions}>
                         <a href="" className={styles.post_timestamp_link}>
                             <div className={styles.post_timestamp}>
-                                21/07/2023
+                                {date}
                             </div>
                         </a>
 
