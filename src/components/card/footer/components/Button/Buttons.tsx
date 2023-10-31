@@ -26,41 +26,41 @@ export function Buttons() {
 
     return (
         <>
-                {/* actions */}
-                <CardActions>
-                    <ActionLabel>
-                        <button onClick={() => addLikeCount()} className='btn_icon'>
-                            <img src={likeIcon} alt="like icon" />
-                        </button>
-                        <ButtonLabelCount>{likeCount}</ButtonLabelCount>
-                    </ActionLabel>
+            {/* actions */}
+            <CardActions>
+                <ActionLabel>
+                    <button onClick={() => addLikeCount()} className='btn_icon'>
+                        <img src={likeIcon} alt="like icon" />
+                    </button>
+                    <ButtonLabelCount>{likeCount}</ButtonLabelCount>
+                </ActionLabel>
 
-                    <ActionLabel>
-                        <button onClick={() => addCommentCount()} className='btn_icon'>
-                            <img src={commentIcon} alt="comment icon" />
-                        </button>
-                        <ButtonLabelCount>{commentCount}</ButtonLabelCount>
-                    </ActionLabel>
+                <ActionLabel>
+                    <button onClick={() => addCommentCount()} className='btn_icon'>
+                        <img src={commentIcon} alt="comment icon" />
+                    </button>
+                    <ButtonLabelCount>{commentCount}</ButtonLabelCount>
+                </ActionLabel>
 
-                    <ActionLabel>
-                        <button onClick={() => addRetweetCount()} className='btn_icon'>
-                            <img src={retweetIcon} alt="retweet icon" />
-                        </button>
-                        <ButtonLabelCount>{retweetCount}</ButtonLabelCount>
-                    </ActionLabel>
+                <ActionLabel>
+                    <button onClick={() => addRetweetCount()} className='btn_icon'>
+                        <img src={retweetIcon} alt="retweet icon" />
+                    </button>
+                    <ButtonLabelCount>{retweetCount}</ButtonLabelCount>
+                </ActionLabel>
 
-                    <ActionLabel>
-                        <button className='btn_icon'>
-                            <img src={whatsappIcon} alt="whatsapp icon" />
-                        </button>
-                    </ActionLabel>
+                <ActionLabel>
+                    <button className='btn_icon'>
+                        <img src={whatsappIcon} alt="whatsapp icon" />
+                    </button>
+                </ActionLabel>
 
-                    <ActionLabel>
-                        <button  className='btn_icon'>
-                            <img src={shareIcon} alt="share icon" />
-                        </button>
-                    </ActionLabel>
-                </CardActions>
+                <ActionLabel>
+                    <button  className='btn_icon'>
+                        <img src={shareIcon} alt="share icon" />
+                    </button>
+                </ActionLabel>
+            </CardActions>
         </>
     )
 }

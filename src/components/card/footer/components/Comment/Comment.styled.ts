@@ -14,11 +14,12 @@ export const CardForm = styled.div`
     border: 1px solid;
 `
 
-export const InputCommentIcon = styled.image<ImageProps>`
+export const InputCommentIcon = styled.img<ImageProps>`
     width: 24px;
     height: 24px;
     margin-left: 5px;
 `
+
 export const InputComment = styled.input`
     border: none;
     margin-left: 8px;
