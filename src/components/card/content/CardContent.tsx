@@ -1,23 +1,31 @@
-import styles from '@/components/card/content/CardContent.module.scss';
 import postPhoto from '@/assets/img/post_media_photo.jpg';
+
+import {
+    CardTextWrapper,
+    CardText,
+    CardMedia,
+    MediaContainer,
+    MediaContainerPreview,
+    Img
+  } from "./CardContent.styled";
 
 export function CardContent({text}: {text: string}){
     return (
         <>
-            <div className={styles.card_text_wrapper}>
-                    <span className={styles.card_text}>
+            <CardTextWrapper>
+                    <CardText>
                         {text}
-                    </span>
-                </div>
+                    </CardText>
+            </CardTextWrapper>
 
                 {/* media */}
-                <div className={styles.card_media} role="presentation">
-                    <div className={styles.media_container}>
-                        <div className={styles.media_container_preview}>
-                            <img src={postPhoto} alt="Post photo of a cat" />
-                        </div>
-                    </div>
-                </div>
+                <CardMedia role="presentation">
+                    <MediaContainer>
+                        <MediaContainerPreview>
+                            <Img src={postPhoto} alt="Post photo of a cat" />
+                        </MediaContainerPreview>
+                    </MediaContainer>
+                </CardMedia>
         </>
     )
 }

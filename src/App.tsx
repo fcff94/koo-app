@@ -6,10 +6,10 @@ import profilePhoto from '@/assets/img/profile_photo.jpeg';
 function App() {
   // const [count, setCount] = useState(0)
   const text = `
-  <p>Welcome to the Koo family 🙂</p>
-  <p>1. Follow people you like by clicking on the '+ Follow' button to see their posts in your feed.</p>
-  <p>2. Share your thoughts with others and gain a following.</p>
-  <p>Happy Koo to you!</p>
+  Welcome to the Koo family 🙂
+  1. Follow people you like by clicking on the '+ Follow' button to see their posts in your feed.
+  2. Share your thoughts with others and gain a following.
+  Happy Koo to you!
   `;
 
   return (
@@ -17,7 +17,7 @@ function App() {
       <CardComponent
         userImg={profilePhoto}
         displayName={'Koo English'}
-        userName={'kooenglish'}
+        userName={'@kooenglish'}
         date={'21/07/2023'}
         text={text}
       />
