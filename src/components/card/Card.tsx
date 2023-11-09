@@ -18,7 +18,7 @@ export function CardComponent({
 }) {
   return (
     <>
-      <div className={styles.card_wrapper}>
+      <div className={styles.card_wrapper} id="card_wrapper">
         <CardHeader
           userImg={userImg}
           displayName={displayName}

@@ -1,10 +1,10 @@
 // import { useState } from 'react';
-import './App.scss';
-import { CardComponent } from './components/card/Card';
-import profilePhoto from '@/assets/img/profile_photo.jpeg';
+import "./App.scss";
+import { CardComponent } from "./components/card/Card";
 
 import { api } from "./services/api";
 import { useState, useEffect } from "react";
+import { NewTweet } from "./pages/NewTweet";
 
 export type PostType = {
   userId: number;
@@ -13,19 +13,12 @@ export type PostType = {
   body: string;
 };
 
+import { Routes, Route } from "react-router-dom";
+import { Feed } from "./pages/Feed";
+import { Explorer } from "./pages/Explorer";
+
 function App() {
   // const [count, setCount] = useState(0)
-
-  const [list, setList] = useState<PostType[]>([]);
-
-  async function loadPosts() {
-    const result = await api.get("users/1/posts");
-    setList(result.data);
-  }
-
-  useEffect(() => {
-    loadPosts();
-  }, []);
 
   // const text = `
   // Welcome to the Koo family 🙂
@@ -36,16 +29,11 @@ function App() {
 
   return (
     <>
-      {list.map((tweet, index) => (
-        <CardComponent
-          key={index}
-          userImg={profilePhoto}
-          displayName={`Koo English ${tweet.userId}`}
-          userName={"@kooenglish"}
-          date={String(`${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()}`)}
-          text={tweet.title}
-        />
-      ))}
+      <Routes>
+        <Route index path="/" element={<Explorer />} />
+        <Route path="/feed" element={<Feed />} />
+        <Route path="/create" element={<NewTweet />} />
+      </Routes>
     </>
   );
 }
