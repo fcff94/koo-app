@@ -1,9 +1,8 @@
-// import { useState } from 'react';
 import "./App.scss";
 import { CardComponent } from "./components/card/Card";
 
 import { api } from "./services/api";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { NewTweet } from "./pages/NewTweet";
 
 export type PostType = {
@@ -11,11 +10,15 @@ export type PostType = {
   id: number;
   title: string;
   body: string;
+  date: string | Date;
+  comments: string[];
+  likes: number;
 };
 
 import { Routes, Route } from "react-router-dom";
 import { Feed } from "./pages/Feed";
 import { Explorer } from "./pages/Explorer";
+import { GlobalProvider } from "./contexts/global";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -29,11 +32,13 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Route index path="/" element={<Explorer />} />
-        <Route path="/feed" element={<Feed />} />
-        <Route path="/create" element={<NewTweet />} />
-      </Routes>
+      <GlobalProvider>
+        <Routes>
+          <Route index path="/" element={<Explorer />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/create" element={<NewTweet />} />
+        </Routes>
+      </GlobalProvider>
     </>
   );
 }

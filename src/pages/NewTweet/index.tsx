@@ -1,14 +1,17 @@
 import { PostType } from "@/App";
 import { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useNavigation } from "react-router-dom";
 
 // import { Comment } from "@/components/card/footer/components/Comment/Comment"
 import { TweetInput } from "@/components/TweetInput";
+import { useGlobal } from "@/contexts/global";
 
 export function NewTweet() {
-  const [tweet, setTweet] = useState("");
-  const [posts, setPosts] = useState<PostType[]>([]);
+  // const [tweet, setTweet] = useState("");
+  // const [posts, setPosts] = useState<PostType[]>([]);
+
+  const { initialPosts, setPosts, tweet, setTweet } = useGlobal();
 
   // export type PostType = {
   //   userId: number;
@@ -16,6 +19,8 @@ export function NewTweet() {
   //   title: string;
   //   body: string;
   // };
+
+  const navigate = useNavigate();
 
   function updateState() {
     event?.preventDefault();
@@ -25,19 +30,20 @@ export function NewTweet() {
       id: Math.random(),
       title: tweet,
       body: "",
+      date: new Date(),
+      comment: [],
+      likes: 0,
     };
 
-    setPosts([...posts, newPost]);
+    setPosts([...initialPosts, newPost]);
     setTweet("");
+
+    navigate("/feed");
   }
 
   return (
     <>
       <h1>NewTweet page</h1>
-
-      {posts.map((tweet) => (
-        <h1 key={tweet.id}>{tweet.title}</h1>
-      ))}
 
       <form
         onSubmit={() => updateState()}
@@ -56,10 +62,12 @@ export function NewTweet() {
             padding: "10px",
           }}
         >
-          <div style={{
-            display: 'flex', 
-            alignItems: 'center',
-          }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <Link to="/feed">
               <img
                 src="https://www.kooapp.com/_next/static/media/create_back-arrow.cea4aa95.svg"
@@ -67,12 +75,12 @@ export function NewTweet() {
               />
             </Link>
             <img
-            width={42}
-                src="https://www.kooapp.com/_next/static/media/profilePlaceholderYellow.df4b6e90.svg"
-                alt="avatar"
-              />
+              width={42}
+              src="https://www.kooapp.com/_next/static/media/profilePlaceholderYellow.df4b6e90.svg"
+              alt="avatar"
+            />
           </div>
-          
+
           <button
             style={{
               backgroundColor: "#b3b2b0",
