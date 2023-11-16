@@ -14,6 +14,6 @@ export function Explorer(){
         <img src="https://i.imgur.com/w1evrRa.png" alt="" />
         </div>
       )}
-    </>
+     </>
   )
 }
