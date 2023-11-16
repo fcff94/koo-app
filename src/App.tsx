@@ -19,6 +19,7 @@ import { Routes, Route } from "react-router-dom";
 import { Feed } from "./pages/Feed";
 import { Explorer } from "./pages/Explorer";
 import { GlobalProvider } from "./contexts/global";
+import { Home } from "./pages/Home";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -34,9 +35,10 @@ function App() {
     <>
       <GlobalProvider>
         <Routes>
-          <Route index path="/" element={<Explorer />} />
+          <Route index path="/" element={<Home />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/create" element={<NewTweet />} />
+          <Route index path="/explorer" element={<Explorer />} />
         </Routes>
       </GlobalProvider>
     </>
